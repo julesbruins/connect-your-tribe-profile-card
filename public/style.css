@@ -1,53 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: "script font";
+    src: url(../fonts/Caramel.ttf);
 }
 
-body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-  background: silver;
-  color: #050542;
+@font-face {
+    color: rgb(110, 79, 66);
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Condensed.ttf)
 }
 
+body{
+    font-size: 16px;
+}
+
+/* VOORKANT */
 header {
-  padding: 0.5rem;
-  background: #A675F5;
-  color: white;
+    background-color: rgb(186, 143, 112);
+    width: 30em; /* de breedte van de header is 30em = 30*16px = 480pixels */
+    height: 20em;
+    text-align: center; 
+    margin: 0 auto; /* de header gaat in het midden staan door 'auto' */
+    position: relative;
+    overflow: hidden;
+}
+header img#arrows {
+    height: 25px;
+    opacity: 0,5;
+    opacity: 50%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}  
+header img#palmleaf1 {
+    opacity: 0,15;
+    opacity: 15%;
+    height: 300px;
+    rotate: 210deg;
+    position: absolute;
+    top: -125px;
+    left: 300px;
+}
+header img#palmleaf2 {
+    opacity: 0,15;
+    opacity: 15%;
+    height: 300px;
+    rotate: 330deg;
+    position: absolute;
+    top: 150px;
+    left: -35px;
+}
+header img#palmleaf3 {
+    opacity: 0,15;
+    opacity: 15%;
+    height: 300px;
+    rotate: 45deg;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
 
-  h1 {
-    text-transform: uppercase;
+
+header h1 {
+    font-size: 90px;
+    rotate: 335deg;
+    color: rgb(110, 79, 66);
+    font-family: "script font";
+    position: absolute;
+    top: -40px;
+    left: 85px;
+} 
+
+/* ACHTERKANT */
+main {
+    /* text-align: center; */
+    width: 30em;
+    height: 20em;
+    margin: 0 auto;
+    background: rgb(186, 143, 112);
+    position: relative;
+    overflow: hidden;
+}
+
+/* new */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-top: 30px;
   }
-}
 
-article {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  width: 20rem;
-  aspect-ratio: 1/1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: white;
-  text-align: center;
-  transform-origin: center;
-  transform: rotate(2deg);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  > p {
-    font-size: 2rem;
-    font-family: 'Permanent Marker', cursive;
-    transform-origin: center;
-    transform: rotate(-6deg);
-    word-break: break-all;
+  .foto {
+    width: 50%;
   }
+
+main img#picture-of-me{
+    border: solid rgb(234, 219, 209);
+    width: 60%;
+    margin: 2em;
 }
 
-footer {
-  height: 1rem;
-  background: #A675F5;
+
+div#informatie ul {
+    padding:1em;
 }
+
+div#informatie li {
+    font-family: "roboto";
+    font-size: 12px;
+    color: rgb(110, 79, 66);
+
+    list-style: none;
+    background: rgb(234, 219, 209); 
+    border-radius: 20px;
+    padding-left:2em;
+    width: 100%;
+
+    background-image: url("../assets/sparkling.png");
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 0.75em;
+}
+
+main img#palmleafa {
+    opacity: 0,15;
+    opacity: 15%;
+    height: 300px;
+    rotate: 95deg;
+    position: absolute;
+    top: -180px;
+    left: 70px;
+}
+main img#palmleafb {
+    opacity: 0,15;
+    opacity: 15%;
+    height: 300px;
+    rotate: 45deg;
+    position: absolute;
+    top: 210px;
+    left: 5px;
+}
+main img#palmleafc {
+    opacity: 0,15;
+    opacity: 15%;
+    height: 300px;
+    rotate: -5deg;
+    position: absolute;
+    top: 200px;
+    left: 175px
+}
+
+
+
+
+ /* dit is een flipcard, moet nog toegepast op de echte flipcard  */
+/* .card {
+    height: 20em;
+    width: 30em;
+    position: relative;
+    transform-style: preserve-3d;
+    
+    transition: 5s ease;
+}
+
+.card-cont {
+    display: inline-block;
+}
+
+.card-cont:hover .card{
+    transform: perspective(400px) rotateY(180deg);
+}
+
+.card_front, .card_back {
+    height: 100%;
+   width: 100%;
+   position: absolute;
+   border-radius: 6px;
+   backface-visibility: hidden;
+
+   line-height: 150px;
+   font-family: sans-serif;
+   font-size: 20px;
+   text-align: center;
+}
+
+.card_front {
+   background-color: yellow;
+   z-index: 1;
+}
+
+.card_back {
+   background-color: pink;
+   transform: rotateY(180deg);
+} */
+
