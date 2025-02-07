@@ -1,56 +1,23 @@
 {% render 'partials/head.liquid' %}
 
+<div class="container">
 <header>
-    <img id="arrows" src="/arrows.png" alt="arrows" />
-    <img id="palmleaf1" src="/palmblad.png" alt="palmleaf" />
     <h1>{{ person.name }}</h1>
-    <img id="palmleaf2" src="/palmblad.png" alt="palmleaf" />
-    <img id="palmleaf3" src="/palmblad.png" alt="palmleaf" />
-  </header>
+    <img id="picture-of-me" src="/IMG_2970.jpg" alt="picture of me" />
+</header>
 
-  <!-- achterkant -->
-  <main>
-    <img id="palmleafa" src="/palmblad.png" alt="palmleaf" />
-
-    <div class="container">
-      <div class="foto">
-        <img id="picture-of-me" src="/IMG_2970.jpg" alt="picture of me" />
-      </div>
-
-      <!-- opsomming -->
-      <div id="informatie">
-        <ul>
-          <li>
-            <p>18 jaar.</p>
-          </li>
-          <li>
-            <p>VWO diploma gehaald.</p>
-          </li>
-          <li>
-            <p>Bijbaan bloemen.</p>
-          </li>
-          <li>
-            <p>Apeldoorn.</p>
-          </li>
-          <li>
-            <p>FDND @ HVA.</p>
-          </li>
-          <li>
-            <p>Droom is om te reizen.</p>
-          </li>
-          <li>
-            <p>Klaar staan voor anderen #1</p>
-          </li>
-          <li>
-            <p>Graag op terras.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <img id="palmleafb" src="/palmblad.png" alt="palmleaf" />
-    <img id="palmleafc" src="/palmblad.png" alt="palmleaf" />
-
-  </main>
+<main>
+    <ul>
+          <li>{{ person.birthdate | date: "%d-%m-%Y"}}</li>
+          <li>{{ person.bio }}</li>
+          <li>{{ person.custom.woonplaats }}</li>
+          <li>VWO diploma gehaald</li>
+          <li>Bijbaan bloemen</li>
+          <li>FDND @ HVA</li>
+          <li>Houdt van gezelligheid</li>
+          <li>Zit op kickboxen</li>
+    </ul>
+</main>
+</div>
 
 {% render 'partials/foot.liquid' %}
